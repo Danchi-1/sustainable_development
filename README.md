@@ -27,7 +27,7 @@ Setup
     1. Clone the Repository:
 bash
 Copy
-git clone https://github.com/yourusername/sdg-air-quality-prediction.git
+git clone ADD URL HERE!!!!!!!!!!!!!
 cd sdg-air-quality-prediction
     2. Install Dependencies:
 bash
