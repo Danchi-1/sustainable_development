@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 class AirQualityAnalyzer:
-    def __init__(self):
-        self.data = None
+    # def __init__(self):
+    #     self.data = None
 
-    def load_data(self, filepath='data/air_quality_processed.csv'):
+    def load_data(self, filepath='data/air_quality.csv'):
         """Load processed data"""
         self.data = pd.read_csv(filepath)
         print(f"Data loaded: {self.data.shape}")
