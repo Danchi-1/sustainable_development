@@ -18,25 +18,25 @@ class AirQualityAnalyzer:
         print("\nBasic Statistics:")
         print(self.data.describe())
 
-    def plot_pollution_trends(self):
-        """Plot pollution trends"""
-        plt.figure(figsize=(12, 6))
+    # def plot_pollution_trends(self):
+    #     """Plot pollution trends"""
+    #     plt.figure(figsize=(12, 6))
         
-        # Convert date to datetime if needed
-        if not pd.api.types.is_datetime64_any_dtype(self.data['date']):
-            self.data['date'] = pd.to_datetime(self.data['date'])
+    #     # Convert date to datetime if needed
+    #     if not pd.api.types.is_datetime64_any_dtype(self.data['Date']):
+    #         self.data['Date'] = pd.to_datetime(self.data['Date'])
             
-        # Plot PM2.5 over time
-        plt.plot(self.data['date'], self.data['pm25'], label='PM2.5')
-        plt.plot(self.data['date'], self.data['pm10'], label='PM10')
-        plt.title('Air Pollution Over Time')
-        plt.xlabel('Date')
-        plt.ylabel('Concentration (µg/m³)')
-        plt.legend()
-        plt.grid(True)
-        plt.tight_layout()
-        plt.savefig('analysis_results/pollution_trends.png')
-        plt.show()
+    #     # Plot PM2.5 over time
+    #     plt.plot(self.data['Date'], self.data['PM2.5'], label='PM2.5')
+    #     plt.plot(self.data['Date'], self.data['PM10'], label='PM10')
+    #     plt.title('Air Pollution Over Time')
+    #     plt.xlabel('Date')
+    #     plt.ylabel('Concentration (µg/m³)')
+    #     plt.legend()
+    #     plt.grid(True)
+    #     plt.tight_layout()
+    #     plt.savefig('analysis_results/pollution_trends.png')
+    #     plt.show()
 
     def plot_health_risk_distribution(self):
         """Plot health risk distribution"""
@@ -52,7 +52,7 @@ class AirQualityAnalyzer:
         """Run complete analysis"""
         self.load_data()
         self.basic_stats()
-        self.plot_pollution_trends()
+        #self.plot_pollution_trends()
         self.plot_health_risk_distribution()
 
 if __name__ == "__main__":
