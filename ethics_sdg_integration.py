@@ -12,16 +12,16 @@ class EthicsSDGAnalyzer:
             'environmental_justice': {}
         }
 
-    def load_data(self, filepath='data/air_quality_processed.csv'):
+    def load_data(self, filepath='data/air_quality.csv'):
         """Load processed data with error handling"""
         try:
             self.data = pd.read_csv(filepath)
             if self.data.empty:
                 raise ValueError("Loaded an empty dataframe")
-            print(f"✅ Data loaded successfully. Shape: {self.data.shape}")
+            print(f"Data loaded successfully. Shape: {self.data.shape}")
             return True
         except Exception as e:
-            print(f"❌ Error loading data: {e}")
+            print(f"Error loading data: {e}")
             self.data = None
             return False
 
@@ -109,9 +109,9 @@ class EthicsSDGAnalyzer:
             with open('ethics_results/recommendations.txt', 'w') as f:
                 f.write("\n".join(self.generate_ethical_recommendations()))
                 
-            print("✅ Results saved to ethics_results/ directory")
+            print("Results saved to ethics_results/ directory")
         except Exception as e:
-            print(f"❌ Error saving results: {e}")
+            print(f"Error saving results: {e}")
 
     def run_analysis(self):
         """Complete analysis pipeline"""
