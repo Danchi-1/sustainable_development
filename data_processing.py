@@ -23,7 +23,7 @@ class AirQualityDataProcessor:
 
     def _generate_synthetic_data(self, n_samples=1000):
         """Generate synthetic air quality data"""
-        print("Generating synthetic data...")
+        print("Generating synthetic air quality data...")
         dates = pd.date_range(start='2023-01-01', periods=n_samples, freq='D')
         
         data = {
